@@ -22,3 +22,9 @@ function playRound(playerSelection, computerSelection) {
 const playerSelection = prompt("Start the game by picking among 'Rock, Paper, Scissors'").toLowerCase();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection))
+
+function game(playRound) {
+    for (let i = 0; i < 5; i++) {
+        
+     }
+}
