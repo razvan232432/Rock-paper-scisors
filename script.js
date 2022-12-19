@@ -1,30 +1,29 @@
-function getComputerChoice() {
-
-    const pick = ['rock', 'paper', 'scissors'];
-    return pick[Math.floor(Math.random() * pick.length)];
-}
-console.log(getComputerChoice())
-
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-       return `It's a tie! you both picked ${playerSelection}`;
-    } else if (playerSelection === "rock" && computerSelection === "scissors") {
-       return "You win! Rock beats Scissors";
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
-       return "You win! Paper beats Rock";
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
-       return "You win! Scissors beats Paper";
-    } else {
-       return `You lose! ${computerSelection} beats ${playerSelection}`;
-    }
+function startGame() {
+   cm = Math.floor(Math.random() * 3);
+ 
+   input = prompt("Enter your Choice!");
+ 
+   pm = parseInt(input);
+ 
+ if (cm == 0&& pm == 1) {
+     alert("You beat Computer with Paper against Rock");
+   } 
+   else if ((cm = 0&& pm == 2)) {
+     alert("Computer Beat you with Rock");
+   } 
+   else if ((cm = 1&& pm == 0)) {
+     alert("Computer Beat you With Paper");
+   } 
+   else if ((cm = 1&& pm == 2)) {
+     alert("You beat computer with Scissor against Paper");
+   } 
+   else if ((cm = 2&& pm == 0)) {
+     alert("You beat computer with Rock against Scissor");
+   }
+    else if ((cm = 2&& pm == 1)) {
+     alert("Computer Beat you With Scissor");
+   }
+    else {
+     alert("It's a tie");
+   }
  }
-
-const playerSelection = prompt("Start the game by picking among 'Rock, Paper, Scissors'").toLowerCase();
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection))
-
-function game(playRound) {
-    for (let i = 0; i < 5; i++) {
-        
-     }
-}
