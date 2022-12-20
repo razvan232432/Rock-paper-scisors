@@ -15,8 +15,15 @@ function playRound(playerSelection, computerSelection) {
   } else {
      return `You lose! ${computerSelection} beats ${playerSelection}`;
   }
+
 }
 
 const playerSelection = prompt("Start the game by picking among 'Rock, Paper, Scissors'").toLowerCase();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection))
+
+const buttons = document.querySelectorAll('.btn')
+buttons.forEach(function(currentBtn){
+  currentBtn.addEventListener('click', handleEvent)
+})
+
